@@ -119,7 +119,7 @@ The Global Superstore business generated approximately **$12.64M** in total reve
 
 The Market Analysis page shows that **APAC** is the largest revenue market with approximately **$3.59M**, followed by **EU** at approximately **$2.94M** and **US** at approximately **$2.30M**.
 
-<img width="3113" height="1753" alt="Screenshot 2026-06-10 190324" src="https://github.com/user-attachments/assets/2b1639e2-3a4a-4778-a7c8-b749efa282f2" />
+<img width="3115" height="1752" alt="image" src="https://github.com/user-attachments/assets/95d75fea-6a90-48bd-8173-d548d927677a" />
 
 Market performance:
 
