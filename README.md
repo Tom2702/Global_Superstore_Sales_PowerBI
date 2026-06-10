@@ -10,12 +10,6 @@
 
 This project analyzes Global Superstore sales performance using Power BI. The dashboard is designed to help business stakeholders monitor revenue, profit, profit margin, order volume, product performance, market performance, and return rate in one centralized analytical report.
 
-The dashboard flow is designed to move from a high-level business summary to deeper market and product analysis:
-
-1. **Executive Summary**: Understand overall sales performance, profitability, order trends, and return rate.
-2. **Market Analysis**: Compare markets by revenue, profit, margin, growth, average order value, and return behavior.
-3. **Product Analysis**: Evaluate category and sub-category performance, best-selling products, profit contribution, and return rate.
-
 ## Business Objectives
 
 The main objective is to transform Global Superstore sales data into actionable insights for revenue growth, profitability improvement, market prioritization, product optimization, and return-rate monitoring.
@@ -37,7 +31,7 @@ The Power BI report uses a star-schema-style model with a central order fact tab
 
 <!-- Insert or replace the Power BI data model screenshot below. -->
 
-<img width="1266" alt="Global Superstore Power BI data model" src="assets/data-model.png" />
+<img width="1198" height="677" alt="Screenshot 2026-06-10 191117" src="https://github.com/user-attachments/assets/0359defe-2315-405b-8078-69cb7699488a" />
 
 | Table | Description |
 |---|---|
@@ -54,24 +48,6 @@ Model highlights:
 - Return lookup table for return-rate analysis at order, category, and market level
 - Region manager mapping to support regional accountability
 - DAX measures used for KPI cards, growth indicators, margins, orders, average order value, and return metrics
-
-## Dataset
-
-| File | Role | Description |
-|---|---|---|
-| `Orders.csv` | Fact source | 51,290 order-line records containing order, customer, market, product, sales, quantity, and profit information |
-| `Returns.csv` | Return lookup | 1,172 returned order records |
-| `People.csv` | People lookup | 13 regional managers mapped to regions |
-
-Dataset coverage:
-
-- Date range: **2011-01-01 to 2014-12-31**
-- Total orders: **25,035**
-- Customers: **1,590**
-- Countries: **147**
-- Markets: **Africa, APAC, Canada, EMEA, EU, LATAM, US**
-- Categories: **Furniture, Office Supplies, Technology**
-- Sub-categories: **17**
 
 ## Design Thinking Approach
 
@@ -97,7 +73,7 @@ Key user pain points:
 - Return behavior needs to be monitored across time, markets, and product categories.
 - Stakeholders need a simple flow from executive KPIs to deeper market and product-level analysis.
 
-<!-- Optional: insert Design Thinking Empathize slide screenshot here. -->
+<img width="3839" height="2159" alt="Screenshot 2026-06-10 193030" src="https://github.com/user-attachments/assets/0a0cd4fc-18a1-40be-b03c-fe73c1a038b7" />
 
 ### 2. Define
 
@@ -105,7 +81,7 @@ The core problem was defined as:
 
 > Global Superstore stakeholders need an interactive dashboard that connects sales performance, profitability, market growth, product contribution, and return behavior so they can identify growth opportunities, margin risks, and operational issues faster.
 
-<!-- Optional: insert Design Thinking Define slide screenshot here. -->
+<img width="3839" height="2159" alt="Screenshot 2026-06-10 193040" src="https://github.com/user-attachments/assets/2b07bcfd-52d3-4a04-a285-36f1b7ed47b0" />
 
 ### 3. Ideate
 
@@ -115,7 +91,7 @@ The dashboard pages were organized into a business analysis flow:
 2. **Market Analysis**: Move into market-level revenue, profit, margin, growth, average order value, order volume, and return-rate analysis.
 3. **Product Analysis**: End with category and sub-category performance, Pareto revenue, best-selling products, margin analysis, and return-rate comparison.
 
-<!-- Optional: insert Design Thinking Ideate slide screenshot here. -->
+<img width="3839" height="2159" alt="Screenshot 2026-06-10 193051" src="https://github.com/user-attachments/assets/42db6f7a-2efa-46cd-a2e0-bed34de98508" />
 
 ## Detailed Dashboard
 
@@ -123,9 +99,7 @@ The dashboard pages were organized into a business analysis flow:
 
 The Global Superstore business generated approximately **$12.64M** in total revenue, **$1.47M** in total profit, **25K orders**, and an overall **11.6% profit margin**.
 
-<!-- Insert or replace the Executive Summary page screenshot below. -->
-
-<img width="2890" alt="Executive Summary dashboard page" src="assets/executive-summary.png" />
+<img width="3117" height="1758" alt="Screenshot 2026-06-10 190309" src="https://github.com/user-attachments/assets/6a43e9fb-3793-49ca-aa60-cafc80058633" />
 
 **Key observations:**
 
@@ -145,9 +119,7 @@ The Global Superstore business generated approximately **$12.64M** in total reve
 
 The Market Analysis page shows that **APAC** is the largest revenue market with approximately **$3.59M**, followed by **EU** at approximately **$2.94M** and **US** at approximately **$2.30M**.
 
-<!-- Insert or replace the Market Analysis page screenshot below. -->
-
-<img width="2890" alt="Market Analysis dashboard page" src="assets/market-analysis.png" />
+<img width="3113" height="1753" alt="Screenshot 2026-06-10 190324" src="https://github.com/user-attachments/assets/2b1639e2-3a4a-4778-a7c8-b749efa282f2" />
 
 Market performance:
 
@@ -180,9 +152,7 @@ Market performance:
 
 The Product Analysis page shows that **Technology** is the strongest category by revenue and profit, while **Furniture** has the weakest profit margin among the three categories.
 
-<!-- Insert or replace the Product Analysis page screenshot below. -->
-
-<img width="2890" alt="Product Analysis dashboard page" src="assets/product-analysis.png" />
+<img width="3116" height="1762" alt="Screenshot 2026-06-10 190415" src="https://github.com/user-attachments/assets/0bc9dc38-2170-449a-98b7-c0a2381d01a3" />
 
 Category performance:
 
@@ -254,38 +224,3 @@ AVG Order Value = DIVIDE([Total Revenue], [Total Orders])
 - **Protect high-performing sub-categories**: Phones, Copiers, Chairs, Bookcases, and Storage drive major revenue and should remain key commercial focus areas.
 - **Monitor return behavior**: Track return rate by market, category, and sub-category to reduce revenue leakage and improve customer experience.
 
-## How to Use
-
-1. Open `Superstore Sales.pbix` in Power BI Desktop.
-2. Check the data source paths in Power Query if the CSV files are stored in a different location.
-3. Refresh the dataset.
-4. Use the `Year`, `Market`, `Category`, and `Sub-Category` slicers to explore the report.
-5. Export the report to PDF if needed. The exported version is available as `Superstore Sales.pdf`.
-
-## Project Structure
-
-```text
-.
-├── Dataset/
-│   ├── Orders.csv
-│   ├── People.csv
-│   └── Returns.csv
-├── assets/
-│   ├── executive-summary.png
-│   ├── market-analysis.png
-│   ├── product-analysis.png
-│   └── data-model.png
-├── Design Thinking.xlsx
-├── Global_Superstore_Design_Thinking_3_Slides_EN.pptx
-├── Superstore Sales.pbix
-├── Superstore Sales.pdf
-└── README.md
-```
-
-## Tools Used
-
-- Power BI Desktop: data modeling, DAX measures, and report design
-- Power Query: data cleaning and transformation
-- DAX: KPI calculations, margins, rates, and business measures
-- CSV dataset: Orders, Returns, and People
-- Design Thinking: problem framing, stakeholder analysis, insight development, and dashboard flow
