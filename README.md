@@ -187,33 +187,6 @@ Top sub-categories by revenue:
 - Furniture requires pricing, discount, cost, or product-mix review because revenue scale is not converting efficiently into profit.
 - Tables should be investigated as a profit-risk area before further promotion or expansion.
 
-## Key Metrics
-
-| Metric | Value |
-|---|---:|
-| Total Revenue | `$12.64M` |
-| Total Profit | `$1.47M` |
-| Profit Margin | `11.6%` |
-| Total Orders | `25K` |
-| Total Quantity | `178K` |
-| Return Rate | `4.7%` |
-
-Core DAX measures:
-
-```DAX
-Total Revenue = SUM(fact_orders[Sales])
-
-Total Profit = SUM(fact_orders[Profit])
-
-Profit Margin = DIVIDE([Total Profit], [Total Revenue])
-
-Total Orders = DISTINCTCOUNT(fact_orders[Order ID])
-
-Total Quantity = SUM(fact_orders[Quantity])
-
-AVG Order Value = DIVIDE([Total Revenue], [Total Orders])
-```
-
 ## Business Recommendations
 
 - **Prioritize profitable growth markets**: Focus on APAC, EU, and US because they combine strong revenue scale with stable profit margins.
